@@ -1,103 +1,71 @@
-# Project Overview
+# 48 Laws of Power
 
-## Overview
+A modern website concept inspired by Robert Greene’s The 48 Laws of Power. It combines elegant design, smooth animations, and intuitive navigation to deliver an immersive reading and learning experience.
 
-This is a full-stack web application showcasing "The 48 Laws of Power" by Robert Greene. The application provides an interactive way to explore and learn about each of the 48 laws through a modern, visually appealing interface. Users can browse all laws, search through them, filter by categories, and view detailed information about each law including historical examples and key principles.
+# Features
 
-## User Preferences
+Interactive landing page introducing all 48 laws at a glance
 
-Preferred communication style: Simple, everyday language.
-Design approach: Mobile-first design
-UI preferences: Removed "Get the Book" and "Author's Other Works" buttons as requested
+Individual pages with in-depth explanations and structured layouts for each law
 
-## System Architecture
+Smooth page transitions and engaging scroll animations
 
-### Frontend Architecture
+Powerful navigation with browsing and search functionality
 
-The frontend is built using **React with TypeScript** and follows a modern component-based architecture:
+Responsive design that adapts seamlessly across desktop, tablet, and mobile
 
-- **Routing**: Uses Wouter for lightweight client-side routing
-- **State Management**: React Query (TanStack Query) for server state management with local React state for UI
-- **Styling**: Tailwind CSS with a custom design system featuring dark themes and sophisticated color palettes
-- **UI Components**: Radix UI primitives with shadcn/ui component library for consistent, accessible components
-- **Animation**: Framer Motion for smooth transitions and interactive animations
-- **Build Tool**: Vite for fast development and optimized builds
+Clean, polished UI/UX with an emphasis on clarity and authority
 
-### Backend Architecture
+# Style Guide
 
-The backend follows a **RESTful API design** with Express.js:
+Colors
 
-- **Framework**: Express.js with TypeScript for type safety
-- **Data Storage**: In-memory storage using a Map-based implementation (MemStorage class)
-- **API Design**: RESTful endpoints for CRUD operations on laws data
-- **Data Validation**: Zod schemas for runtime type validation
-- **Development**: Hot module reloading with Vite integration in development mode
+Primary: #1A1A2E (Dark Blue)
 
-### Database Schema
+Secondary: #000000 (Black)
 
-Currently uses **Drizzle ORM** with PostgreSQL schema definitions but implements in-memory storage:
+Accent: #DC143C (Crimson Red)
 
-- **Laws Table**: Contains id, title, descriptions, principles, examples, key points, category, and icon
-- **Schema Validation**: Drizzle-Zod integration for type-safe database operations
-- **Migration Ready**: Configured for PostgreSQL with migration support via Drizzle Kit
+Background: #0F0F23 (Deep Navy)
 
-### API Structure
+Text: #FFFFFF (White)
 
-RESTful API endpoints:
-- `GET /api/laws` - Retrieve all laws
-- `GET /api/laws/:id` - Get specific law by ID
-- `GET /api/laws/search/:query` - Search laws by text
-- `GET /api/laws/category/:category` - Filter laws by category
+Subtle: #16213E (Muted Blue)
 
-### Component Organization
+# Typography
 
-- **Pages**: Route-level components (Landing, Laws, LawDetail, NotFound)
-  - Landing: Mobile-first landing page with hero section, features, and about content
-  - Laws: Dedicated page for browsing all laws with search and filtering
-  - LawDetail: Individual law pages with mobile-optimized layout
-- **Components**: Reusable UI components (LawCard, SearchFilter)
-- **UI Components**: Shared design system components from shadcn/ui
-- **Shared**: Type definitions and schemas shared between client and server
+Inter for modern, clean body text
 
-### Development Workflow
+Playfair Display for elegant, authoritative headings
 
-- **TypeScript**: Strict type checking across the entire codebase
-- **ESBuild**: Fast production builds for the server
-- **Path Aliases**: Configured for clean imports (@/, @shared/, @assets/)
-- **Development Server**: Integrated Vite dev server with Express API
+# Design Principles
 
-## External Dependencies
+Gradient hero sections with dramatic visual appeal
 
-### Core Framework Dependencies
-- **React 18**: Frontend framework with modern hooks and concurrent features
-- **Express.js**: Backend web framework for Node.js
-- **TypeScript**: Type safety across the entire application
-- **Vite**: Build tool and development server
+Card-based presentation for laws to ensure consistency
 
-### Database and ORM
-- **Drizzle ORM**: Type-safe database toolkit with PostgreSQL support
-- **@neondatabase/serverless**: Serverless PostgreSQL database connection
-- **Drizzle Kit**: Database migration and introspection tool
+Responsive grid system for balanced layouts
 
-### UI and Styling
-- **Tailwind CSS**: Utility-first CSS framework
-- **Radix UI**: Accessible, unstyled UI primitives
-- **shadcn/ui**: Pre-built component library based on Radix UI
-- **Framer Motion**: Animation library for React
-- **Lucide React**: Icon library
+Modern button designs with subtle hover interactions
 
-### State Management and Data Fetching
-- **TanStack React Query**: Server state management and caching
-- **Wouter**: Lightweight routing library for React
+Smooth scroll and page animations for a polished experience
 
-### Development Tools
-- **ESBuild**: Fast JavaScript bundler for production builds
-- **PostCSS**: CSS processing with Autoprefixer
-- **Replit Plugins**: Development environment integration tools
+Strong hierarchy in typography to emphasize importance and flow
 
-### Form and Validation
-- **React Hook Form**: Performant forms with minimal re-renders
-- **Zod**: TypeScript-first schema validation
-- **@hookform/resolvers**: Validation resolver for React Hook Form
+# User Experience
 
-The application is designed to be easily deployable on Replit with potential for database integration when moving from development to production.
+The website is designed to be both informative and engaging, presenting The 48 Laws of Power in a way that mirrors the book’s authoritative tone. Each interaction feels deliberate, with carefully timed animations that highlight the weight and significance of the content. The combination of dark themes, bold typography, and strategic color use reinforces a sense of power, intrigue, and sophistication.
+
+# Technical Notes
+
+Built with a modern front-end framework 
+
+Styled with utility-first CSS for responsive design
+
+Optimized for performance with smooth animations and transitions
+
+Structured to allow easy scalability for future content or feature expansion
+
+# License
+
+This project is for educational and showcase purposes only. The 48 Laws of Power is authored by Robert Greene.
